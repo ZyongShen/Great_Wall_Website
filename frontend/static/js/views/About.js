@@ -1,9 +1,24 @@
 import AbstractView from './AbstractView.js';
 
-export default class extends AbstractView {
+export default class About extends AbstractView {
     constructor() {
         super();
         this.setTitle("About");
+    }
+
+    makeMap() {
+        var longLat = [-72.66189, 41.70591]; // [lng, lat]
+        window.onload = () => {
+            mapboxgl.accessToken = 'pk.eyJ1Ijoic2hpenlvbmciLCJhIjoiY2tqMXE0enAzM2hwczMwbHJmMG55MzFzeiJ9.8A18iJVhv4uE5t_LseCmkQ';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: longLat,
+                zoom: 17,
+            });
+    
+            var marker = new mapboxgl.Marker().setLngLat(longLat).addTo(map);
+        }
     }
 
     async getHtml() {

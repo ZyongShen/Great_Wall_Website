@@ -8,6 +8,7 @@ function navigateTo(url) {
 }
 
 async function router() {
+    // Views associated with their pathes
     const routes = [
         {path: "/menu", view: Menu},
         {path: "/about", view: About},
@@ -22,6 +23,7 @@ async function router() {
 
     let match = potential.find(potential => potential.isMatch);
 
+    // Default is set to menu page
     if (!match) {
         // Go back to the default
         match = {
@@ -38,21 +40,6 @@ async function router() {
 
 };
 
-async function makeMap() {
-    var longLat = [-72.66189, 41.70591]; // [lng, lat]
-    window.onload = () => {
-        mapboxgl.accessToken = 'pk.eyJ1Ijoic2hpenlvbmciLCJhIjoiY2tqMXE0enAzM2hwczMwbHJmMG55MzFzeiJ9.8A18iJVhv4uE5t_LseCmkQ';
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: longLat,
-            zoom: 17,
-        });
-
-        var marker = new mapboxgl.Marker().setLngLat(longLat).addTo(map);
-    }
-}
-
 // back and forward arrows
 window.addEventListener("popstate", router);
 
@@ -67,7 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
     router();
-    makeMap();
+    var about = new About();
+    about.makeMap();
 });
 
 
