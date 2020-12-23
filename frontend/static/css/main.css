@@ -1,0 +1,27 @@
+.img-fluid {
+    height: 150px;
+    object-fit: cover;
+}
+
+.gwname {
+    font-weight: bold;
+}
+
+.hours {
+    font-weight: bold;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid;
+    margin: 1em 0;
+    padding: 0;
+}
+
+#map {
+    top: 10px;
+    height: 400px;
+    width: 100%;
+}
