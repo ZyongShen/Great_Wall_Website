@@ -57,5 +57,3 @@ document.addEventListener("DOMContentLoaded", () => {
     var about = new About();
     about.makeMap();
 });
-
-
