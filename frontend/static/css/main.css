@@ -11,6 +11,10 @@
     font-weight: bold;
 }
 
+#payments {
+    font-weight: bold;
+}
+
 hr {
     display: block;
     height: 1px;
@@ -24,4 +28,27 @@ hr {
     top: 10px;
     height: 400px;
     width: 100%;
+}
+
+.card {
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.dropdown-menu {
+    width: 700px;
+}
+
+.btn {
+    width: 700px;
+    
+}
+
+.card-body {
+    text-align: left;
+}
+
+.shadow-sm {
+    width: auto;
+    margin-bottom: 10px;
 }

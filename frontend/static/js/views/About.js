@@ -31,6 +31,14 @@ export default class About extends AbstractView {
                         <h6>(860) 257-9933</h6>
                     </div>
 
+                    <div class = "col">
+                        <div>
+                            <h2 id = "payments">Accepted Payment Types</h2>
+                            <h6>Cash, Credit, Debit</div>
+                            <h6>MasterCard, Discovery, VISA, AmericanExress</h6> 
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <hr>
@@ -42,10 +50,15 @@ export default class About extends AbstractView {
 
                     <div class = "col">
                         <h2 class = "hours">Hours</h2>
-                        <h6>Sunday: 11:30 AM - 10:00 PM</h6>
-                        <h6>Monday - Thursday: 10:30 AM - 10:30 PM</h6>
-                        <h6>Friday - Saturday: 10:30 AM - 11:00 PM</h6>
+                        <h6>Sunday: 12:00 PM - 10:00 PM</h6>
+                        <h6>Monday: 10:30 AM - 10:30 PM</h6>
+                        <h6>Tuesday: 5:00 PM - 10:30 PM</h6>
+                        <h6>Wednesday: 10:30 AM - 10:30 PM</h6>
+                        <h6>Thursday: 10:30 AM - 10:30 PM</h6>
+                        <h6>Friday: 10:30 AM - 11:00 PM</h6>
+                        <h6>Saturday: 10:30 AM - 11:00 PM</h6>
                     </div>
+                    
                 </div>
             </div>
         `;

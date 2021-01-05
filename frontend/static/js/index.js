@@ -2,9 +2,19 @@ import Menu from "./views/Menu.js";
 import About from "./views/About.js";
 
 
+
 function navigateTo(url) {
     history.pushState(null, null, url);
     router();
+}
+
+// Find if it is menu or about
+function pageFinder(item) {
+    if (location.pathname.indexOf(item) > -1) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 async function router() {
@@ -17,26 +27,38 @@ async function router() {
     const potential = routes.map(route => {
         return {
             route: route,
-            isMatch: location.pathname === route.path // Checks the path we are currently on
+            isMatch: pageFinder(route.path)//location.pathname === route.path Checks the path we are currently on
         };
     });
 
-    let match = potential.find(potential => potential.isMatch);
+
+    let match = potential.find(potential => potential.isMatch); // Find where isMatch is true
 
     // Default is set to menu page
     if (!match) {
         // Go back to the default
         match = {
-            route: routes[0],
+            route: routes[1],
             isMatch: true
         };
     }
 
     const view = new match.route.view(); // instance of view at matched route
-    
-    document.querySelector("#app").innerHTML = await view.getHtml();
 
-    console.log(match.route.view);
+    // Decide what to call based on url
+    if (view instanceof About) {
+        document.querySelector("#app").innerHTML = await view.getHtml(); // Set the html items upon page load
+    } else if (view instanceof Menu) {
+        // Pass the pathname and find which html to show
+        document.querySelector("#app").innerHTML = await view.getHtml(location.pathname);
+        // Change the active tab
+        view.activeHelper(location.pathname);
+    }
+
+
+    
+
+    console.log(match.route.view); // Log the page load
 
 };
 
@@ -48,12 +70,18 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target.matches("[data-link]")) {
             e.preventDefault(); // Prevent from refreshing the page
             navigateTo(e.target.href); // Follow the href found on the element
+            // reload page to show the map on the about page
             if (window.location.href.indexOf("about") > -1) {
                 location.reload();
             }
         }
     })
-    router();
+    router(); // Sets the initial page items
+
+    // Sets up the map on the about page
     var about = new About();
-    about.makeMap();
+    if (window.location.href.indexOf("about") > -1) {
+        about.makeMap();
+    }
 });
+
