@@ -25,30 +25,11 @@ export default class About extends AbstractView {
         return `
             <div class = "container">
                 <div class = "row">
-                    <div class = "col">
+                    <div class = "col-md-6">
                         <h1 class = "gwname" id = "myName">Great Wall</h1>
                         <h6>685 Silas Deane Hwy.</h6>
                         <h6>(860) 257-9933</h6>
-                    </div>
 
-                    <div class = "col">
-                        <div>
-                            <h2 id = "payments">Accepted Payment Types</h2>
-                            <h6>Cash, Credit, Debit</div>
-                            <h6>MasterCard, Discovery, VISA, AmericanExress</h6> 
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <hr>
-            <div class = "container">
-                <div class = "row">
-                    <div class = "col">
-                        <div id = "map"></div>
-                    </div>
-
-                    <div class = "col">
                         <h2 class = "hours">Hours</h2>
                         <h6>Sunday: 12:00 PM - 10:00 PM</h6>
                         <h6>Monday: 10:30 AM - 10:30 PM</h6>
@@ -57,8 +38,15 @@ export default class About extends AbstractView {
                         <h6>Thursday: 10:30 AM - 10:30 PM</h6>
                         <h6>Friday: 10:30 AM - 11:00 PM</h6>
                         <h6>Saturday: 10:30 AM - 11:00 PM</h6>
+
+                        <h2 id = "payments">Accepted Payment Types</h2>
+                        <h6>Cash, Credit, Debit</h6>
+                        <h6>MasterCard, Discovery, VISA, AmericanExress</h6>
                     </div>
-                    
+
+                    <div class = "col-md-6">
+                        <div id = "map"></div>
+                    </div>
                 </div>
             </div>
         `;

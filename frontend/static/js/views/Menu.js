@@ -15,7 +15,7 @@ export default class Menu extends AbstractView {
     htmlHelper(foods) {
         var result = ``;
         for (var i = 0; i < foods.length; i++) {
-            result += `<div class = "card shadow-sm bg-white rounded"><div class = "card-body">${foods[i]}</div></div>`;
+            result += `<div class = "card shadow-sm bg-white rounded"><div class = "card-body"><h5 id = "theFood">${foods[i]}</h5></div></div>`;
         }
         return result; 
     }
@@ -32,7 +32,7 @@ export default class Menu extends AbstractView {
 
         for (var key in categories) {
             var foods = this.htmlHelper(categories[key]);
-            result += (`<h3>${key}</h3>` + foods);
+            result += (`<h3>${key}</h3>` + foods + `<br>`);
         }
         return result;
     }
@@ -59,32 +59,32 @@ export default class Menu extends AbstractView {
     getAppetizer() {
         var result = ``;
         var foods = [
-            `1. Egg Roll`,
-            `2. Shrimp Egg Roll`,
-            `3. Fantail Shrimp`,
-            `4. Spring Roll`,
-            `5. BBQ Spare Ribs(w/ bone)`,
-            `6. Boneless Spare Ribs`,
-            `7. Chicken Wings with Garlic Sauce(4)`,
-            `8. French Fries`,
-            `9. Fried Wonton(10)`,
-            `10. Chicken Nuggets(10)`,
-            `11. Fried Scallops(12)`,
-            `12. Beef Stick(4)`,
-            `13. Onion Rings`,
-            `14. Shrimp Toast(4)`,
-            `15. Scallion Pancakes`,
-            `16. Pork Dumplings(8)(Steamed or Fried)`,
-            `17. Vegetable Dumplings`,
-            `18. Spinach Chicken Dumplings(8)`,
-            `19. Crab Rangoon(8)`,
-            `20. Golden Fingers(5)`,
-            `21. Wonton with Spicy Sauce`,
-            `22. Cold Noodle with Sesame Sauce`,
-            `23. Shrimp Dumplings(8)`,
-            `24. Combination Dumplings(8)`,
-            `25. Pu Pu Platter for 2`,
-            `26. Chicken Stick(4)`
+            `Egg Roll`,
+            `Shrimp Egg Roll`,
+            `Fantail Shrimp`,
+            `Spring Roll`,
+            `BBQ Spare Ribs(w/ bone)`,
+            `Boneless Spare Ribs`,
+            `Chicken Wings with Garlic Sauce(4)`,
+            `French Fries`,
+            `Fried Wonton(10)`,
+            `Chicken Nuggets(10)`,
+            `Fried Scallops(12)`,
+            `Beef Stick(4)`,
+            `Onion Rings`,
+            `Shrimp Toast(4)`,
+            `Scallion Pancakes`,
+            `Pork Dumplings(8)(Steamed or Fried)`,
+            `Vegetable Dumplings`,
+            `Spinach Chicken Dumplings(8)`,
+            `Crab Rangoon(8)`,
+            `Golden Fingers(5)`,
+            `Wonton with Spicy Sauce`,
+            `Cold Noodle with Sesame Sauce`,
+            `Shrimp Dumplings(8)`,
+            `Combination Dumplings(8)`,
+            `Pu Pu Platter for 2`,
+            `Chicken Stick(4)`
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -94,17 +94,17 @@ export default class Menu extends AbstractView {
     getSoup() {
         var result = ``;
         var foods = [
-            `27. Cantonese Wonton Soup(Shrimp and Pork)`,
-            `28. Wonton Soup`,
-            `29. Egg Drop Soup`,
-            `30. Chicken Rice Soup`,
-            `30. Chicken Noodle Soup`,
-            `31. Mixed Wonton Egg Drop Soup`,
-            `32. Hot and Sour Soup`,
-            `33. Vegetable Bean Curd Soup`,
-            `34. House Special Soup`,
-            `35. Seafood Soup`,
-            `36. Minced Chicken and Corn Soup`
+            `Cantonese Wonton Soup(Shrimp and Pork)`,
+            `Wonton Soup`,
+            `Egg Drop Soup`,
+            `Chicken Rice Soup`,
+            `Chicken Noodle Soup`,
+            `Mixed Wonton Egg Drop Soup`,
+            `Hot and Sour Soup`,
+            `Vegetable Bean Curd Soup`,
+            `House Special Soup`,
+            `Seafood Soup`,
+            `Minced Chicken and Corn Soup`
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -113,14 +113,14 @@ export default class Menu extends AbstractView {
     getFriedRice() {
         var result = ``;
         var foods = [
-            `37. Vegetable Fried Rice`,
-            `38. Chicken Fried Rice`,
-            `39. Roast Pork Fried Rice`,
-            `40. Beef Fried Rice`,
-            `41. Shrimp Fried Rice`,
-            `42. House Special Fried Rice`,
-            `43. Lobster Fried Rice`,
-            `44. Seafood Pineapple Fried Rice`
+            `Vegetable Fried Rice`,
+            `Chicken Fried Rice`,
+            `Roast Pork Fried Rice`,
+            `Beef Fried Rice`,
+            `Shrimp Fried Rice`,
+            `House Special Fried Rice`,
+            `Lobster Fried Rice`,
+            `Seafood Pineapple Fried Rice`
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -129,9 +129,9 @@ export default class Menu extends AbstractView {
     getGrilled() {
         var result = ``;
         var foods = [
-            `45. Grilled Shrimp with Teriyaki Sauce`,
-            `46. Grilled Beef with Teriyaki Sauce`,
-            `47. Grilled Chicken with Teriyaki Sauce`
+            `Grilled Shrimp with Teriyaki Sauce`,
+            `Grilled Beef with Teriyaki Sauce`,
+            `Grilled Chicken with Teriyaki Sauce`
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -141,11 +141,11 @@ export default class Menu extends AbstractView {
     getMeinSuey() {
         var result = ``;
         var foods = [
-            `48. Vegetable Chow Mein or Chop Suey`,
-            `49. Pork Chow Mein or Chop Suey`,
-            `50. Chicken Chow Mein or Chop Suey`,
-            `51. Beef Chow Mein or Chop Suey`,
-            `52. Shrimp Chow Mein or Chop Suey`
+            `Vegetable Chow Mein or Chop Suey`,
+            `Pork Chow Mein or Chop Suey`,
+            `Chicken Chow Mein or Chop Suey`,
+            `Beef Chow Mein or Chop Suey`,
+            `Shrimp Chow Mein or Chop Suey`
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -154,12 +154,12 @@ export default class Menu extends AbstractView {
     getLoMein() {
         var result = ``;
         var foods = [
-            `53. Vegetable Lo Mein`,
-            `54. Roast Pork Lo Mein`,
-            `55. Chicken Lo Mein`,
-            `56. Beef Lo Mein`,
-            `57. Shrimp Lo Mein`,
-            `58. House Special Lo Mein`
+            `Vegetable Lo Mein`,
+            `Roast Pork Lo Mein`,
+            `Chicken Lo Mein`,
+            `Beef Lo Mein`,
+            `Shrimp Lo Mein`,
+            `House Special Lo Mein`
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -169,12 +169,12 @@ export default class Menu extends AbstractView {
     getMeiChow() {
         var result = ``;
         var foods = [
-            `59. Roast Pork Mei Fun or Chow Fun`,
-            `60. Chicken Mei Fun or Chow Fun`,
-            `61. Beef Mei Fun or Chow Fun`,
-            `62. Shrimp Mei Fun or Chow Fun`,
-            `63. Singapore Style Mei Fun or Chow Fun`,
-            `64. Vegetable Mei Fun or Chow Fun`
+            `Roast Pork Mei Fun or Chow Fun`,
+            `Chicken Mei Fun or Chow Fun`,
+            `Beef Mei Fun or Chow Fun`,
+            `Shrimp Mei Fun or Chow Fun`,
+            `Singapore Style Mei Fun or Chow Fun`,
+            `Vegetable Mei Fun or Chow Fun`
         ];
         result = this.htmlHelper(foods);
         return result;    
@@ -183,13 +183,13 @@ export default class Menu extends AbstractView {
     getEFG() {
         var result = ``;
         var foods = [
-            `65. Vegetable Egg Foo Young`,
-            `66. Roast Pork Egg Foo Young`,
-            `67. Chicken Egg Foo Young`,
-            `68. Mushroom Egg Foo Young`,
-            `69. Beef Egg Foo Young`,
-            `70. Shrimp Egg Foo Young`,
-            `71. House Special Egg Foo Young`
+            `Vegetable Egg Foo Young`,
+            `Roast Pork Egg Foo Young`,
+            `Chicken Egg Foo Young`,
+            `Mushroom Egg Foo Young`,
+            `Beef Egg Foo Young`,
+            `Shrimp Egg Foo Young`,
+            `House Special Egg Foo Young`
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -198,16 +198,16 @@ export default class Menu extends AbstractView {
     getPork() {
         var result = ``;
         var foods = [
-            `72. Roast Pork with Broccoli`,
-            `73. Roast Pork with Bean Sprouts`,
-            `74. Roast Pork with Chinese Vegetables`,
-            `75. Shredded Pork with String Beans`,
-            `76. Sweet and Sour Pork`,
-            `77. Pork with Mixed Vegetables`,
-            `78. Moo Shu Pork`,
-            `79. Shredded Pork with Szechuan Sauce`,
-            `80. Shredded Pork with Garlic Sauce`,
-            `81. Double Sauteed Sliced Pork`
+            `Roast Pork with Broccoli`,
+            `Roast Pork with Bean Sprouts`,
+            `Roast Pork with Chinese Vegetables`,
+            `Shredded Pork with String Beans`,
+            `Sweet and Sour Pork`,
+            `Pork with Mixed Vegetables`,
+            `Moo Shu Pork`,
+            `Shredded Pork with Szechuan Sauce`,
+            `Shredded Pork with Garlic Sauce`,
+            `Double Sauteed Sliced Pork`
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -218,24 +218,24 @@ export default class Menu extends AbstractView {
     getChicken() {
         var result = ``;
         var foods = [
-            `82. Chicken with Lobster Sauce`,
-            `83. Chicken with Bean Curd`,
-            `84. Chicken with Broccoli`,
-            `85. Chicken with Almond Ding`,
-            `86. Chicken with Black Bean Sauce`,
-            `87. Chicken with Pepper and Tomato`,
-            `88. Moo Goo Gai Pan`,
-            `89. Curren Chicken with Onion`,
-            `90. Kung Pao Chicken`,
-            `91. Diced Chicken and Cashew`,
-            `92. Chicken with Stirng Beans`,
-            `93. Chicken with Eggplants`,
-            `94. Sweet and Sour Chicken`,
-            `95. Chicken with Mixed Vegetables`,
-            `96. Moo Shu Chicken`,
-            `97. Chicken with Garlic Sauce`,
-            `98. Chicken Hunan Style`,
-            `99. Szechuan Chicken`
+            `Chicken with Lobster Sauce`,
+            `Chicken with Bean Curd`,
+            `Chicken with Broccoli`,
+            `Chicken with Almond Ding`,
+            `Chicken with Black Bean Sauce`,
+            `Chicken with Pepper and Tomato`,
+            `Moo Goo Gai Pan`,
+            `Curry Chicken with Onion`,
+            `Kung Pao Chicken`,
+            `Diced Chicken and Cashew`,
+            `Chicken with Stirng Beans`,
+            `Chicken with Eggplants`,
+            `Sweet and Sour Chicken`,
+            `Chicken with Mixed Vegetables`,
+            `Moo Shu Chicken`,
+            `Chicken with Garlic Sauce`,
+            `Chicken Hunan Style`,
+            `Szechuan Chicken`
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -245,21 +245,21 @@ export default class Menu extends AbstractView {
     getBeef() {
         var result = ``;
         var foods = [
-            `100. Beef with Potato`,
-            `101. Beef with Broccoli`,
-            `102. Beef with Peppers and Onions`,
-            `103. Beef with Pepper and Tomato`,
-            `104. Beef with Chinese Vegetables`,
-            `105. Beef with Mushrooms`,
-            `106. Beef with Bean Sprouts`,
-            `107. Beef with Oyster Sauce`,
-            `108. Beef with Eggplant`,
-            `109. Beef with String Beans`,
-            `110. Beef with Mixed Vegetables`,
-            `111. Moo Shu Beef`,
-            `112. Beef with Garlic Sauce`,
-            `113. Beef with Hunan Style`,
-            `114. Hot and Spicy Shredded Beef`
+            `Beef with Potato`,
+            `Beef with Broccoli`,
+            `Beef with Peppers and Onions`,
+            `Beef with Pepper and Tomato`,
+            `Beef with Chinese Vegetables`,
+            `Beef with Mushrooms`,
+            `Beef with Bean Sprouts`,
+            `Beef with Oyster Sauce`,
+            `Beef with Eggplant`,
+            `Beef with String Beans`,
+            `Beef with Mixed Vegetables`,
+            `Moo Shu Beef`,
+            `Beef with Garlic Sauce`,
+            `Beef with Hunan Style`,
+            `Hot and Spicy Shredded Beef`
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -481,8 +481,9 @@ export default class Menu extends AbstractView {
 
     paramHandler(myPath) {
         var specifics = ``;
-        if (myPath.indexOf("specialties") > -1) {
+        if (myPath.indexOf("specialties") > -1 || myPath == "/menu") {
             specifics = this.getSpecialties();
+            
         }
         if (myPath.indexOf("appetizer") > 1) {
             specifics = this.getAppetizer();
@@ -553,7 +554,7 @@ export default class Menu extends AbstractView {
                     </div>
                 </div>
 
-                <div class = "col-6">
+                <div class = "col-9">
                     <div id = "items">
                         ${specifics}
                     </div>

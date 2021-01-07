@@ -5,6 +5,7 @@
 
 .gwname {
     font-weight: bold;
+    font-family: Arial;
 }
 
 .hours {
@@ -26,6 +27,7 @@ hr {
 
 #map {
     top: 10px;
+    bottom: 10px;
     height: 400px;
     width: 100%;
 }
@@ -51,4 +53,17 @@ hr {
 .shadow-sm {
     width: auto;
     margin-bottom: 10px;
+}
+
+a:hover {
+    color: blue;
+}
+
+a {
+    color: grey;
+}
+
+.card-img {
+    width: 300px;
+    height: 200px;
 }

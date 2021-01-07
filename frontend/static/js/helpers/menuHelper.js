@@ -34,6 +34,9 @@ export default class menuHelper {
                 desiredId = categories[i];
             }
         }
+        if (desiredId == "") {
+            desiredId = categories[0];
+        }
         // Set the element to active
         var myElement = document.getElementById(desiredId);
         myElement.className = "nav-link active";
