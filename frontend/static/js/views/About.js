@@ -27,7 +27,7 @@ export default class About extends AbstractView {
                 <div class = "row">
                     <div class = "col-md-6">
                         <h1 class = "gwname" id = "myName">Great Wall</h1>
-                        <h6>685 Silas Deane Hwy.</h6>
+                        <h6>685 Silas Deane Hwy. Wethersfield, CT 06109</h6>
                         <h6>(860) 257-9933</h6>
 
                         <h2 class = "hours">Hours</h2>
@@ -39,9 +39,10 @@ export default class About extends AbstractView {
                         <h6>Friday: 10:30 AM - 11:00 PM</h6>
                         <h6>Saturday: 10:30 AM - 11:00 PM</h6>
 
-                        <h2 id = "payments">Accepted Payment Types</h2>
-                        <h6>Cash, Credit, Debit</h6>
-                        <h6>MasterCard, Discovery, VISA, AmericanExress</h6>
+                        <pre>
+
+
+                        </pre>
                     </div>
 
                     <div class = "col-md-6">

@@ -45,14 +45,19 @@ async function router() {
 
     const view = new match.route.view(); // instance of view at matched route
 
+
     // Decide what to call based on url
     if (view instanceof About) {
         document.querySelector("#app").innerHTML = await view.getHtml(); // Set the html items upon page load
+        document.querySelector("#myAbout").className = "nav-link active";
+        document.querySelector("#myMenu").className = "nav-link";
     } else if (view instanceof Menu) {
         // Pass the pathname and find which html to show
         document.querySelector("#app").innerHTML = await view.getHtml(location.pathname);
         // Change the active tab
         view.activeHelper(location.pathname);
+        document.querySelector("#myMenu").className = "nav-link active";
+        document.querySelector("#myAbout").className = "nav-link";
     }
 
 
