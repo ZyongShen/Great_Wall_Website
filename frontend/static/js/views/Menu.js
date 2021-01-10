@@ -523,7 +523,10 @@ export default class Menu extends AbstractView {
 
     async getHtml(myPath) {
         var specifics = ``;
+        var options = ``;
+        var helper = new menuHelper();
         // Handle the different possibilities
+        options = helper.getOptions();
         specifics = this.paramHandler(myPath);
         return `
         <div class = "container">
@@ -552,11 +555,14 @@ export default class Menu extends AbstractView {
                     <a class="nav-link" id="amerdish" data-toggle="pills" href="/menu/amerdish" role="tab" aria-controls="v-pills-settings" aria-selected="false">American Dish Specials</a>
                     <a class="nav-link" id="thai" data-toggle="pills" href="/menu/thai" role="tab" aria-controls="v-pills-settings" aria-selected="false">Thai Food</a>
                     </div>
+
                 </div>
 
                 <div class = "col-9">
                     <div id = "items">
-                        ${specifics}
+                        <div class = "scrollItems">
+                            ${specifics}
+                        </div>
                     </div>
                 </div>
             </div>
