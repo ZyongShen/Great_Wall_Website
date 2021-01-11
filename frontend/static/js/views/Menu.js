@@ -4,7 +4,6 @@ import menuHelper from "../helpers/menuHelper.js";
 export default class Menu extends AbstractView {
     constructor() {
         super();
-        this.setTitle("Menu");
     }
 
     activeHelper(myPath) {
@@ -13,6 +12,8 @@ export default class Menu extends AbstractView {
     }
 
     htmlHelper(foods) {
+        // Make adjustments to account for price
+        // List is [[foot item, price]]
         var result = ``;
         for (var i = 0; i < foods.length; i++) {
             result += `<div class = "card shadow-sm bg-white rounded"><div class = "card-body"><h5 id = "theFood">${foods[i]}</h5></div></div>`;
@@ -59,32 +60,33 @@ export default class Menu extends AbstractView {
     getAppetizer() {
         var result = ``;
         var foods = [
-            `Egg Roll`,
-            `Shrimp Egg Roll`,
-            `Fantail Shrimp`,
-            `Spring Roll`,
-            `BBQ Spare Ribs(w/ bone)`,
-            `Boneless Spare Ribs`,
-            `Chicken Wings with Garlic Sauce(4)`,
-            `French Fries`,
-            `Fried Wonton(10)`,
-            `Chicken Nuggets(10)`,
-            `Fried Scallops(12)`,
-            `Beef Stick(4)`,
-            `Onion Rings`,
-            `Shrimp Toast(4)`,
-            `Scallion Pancakes`,
-            `Pork Dumplings(8)(Steamed or Fried)`,
-            `Vegetable Dumplings`,
-            `Spinach Chicken Dumplings(8)`,
-            `Crab Rangoon(8)`,
-            `Golden Fingers(5)`,
-            `Wonton with Spicy Sauce`,
-            `Cold Noodle with Sesame Sauce`,
-            `Shrimp Dumplings(8)`,
-            `Combination Dumplings(8)`,
-            `Pu Pu Platter for 2`,
-            `Chicken Stick(4)`
+            [`Egg Roll`, `1.75`],
+            [`Shrimp Egg Roll`, `1.75`],
+            [`Fantail Shrimp`, `1.75`],
+            [`Spring Roll`, `1.95`],
+            [`BBQ Spare Ribs(w/ bone)`, `(S) 8.75 (L) 13.95`],
+            [`Boneless Spare Ribs`, `(S) 8.75 (L) 13.95`],
+            [`Chicken Wings with Garlic Sauce(4)`, `6.75`],
+            [`French Fries`, `2.95`],
+            [`Fried Wonton(10)`, `5.25`],
+            [`Chicken Nuggets(10)`, `5.50`],
+            [`Fried Scallops(12)`, `5.55`],
+            [`Beef Stick(4)`, `8.75`],
+            [`Onion Rings`, `2.95`],
+            [`Shrimp Toast(4)`, `5.25`],
+            [`Scallion Pancakes`, `5.95`],
+            [`Pork Dumplings(Steamed or Fried)(8)`, `6.75`] ,
+            [`Vegetable Dumplings(8)`, `6.75`],
+            [`Spinach Chicken Dumplings(8)`, `7.95`],
+            [`Crab Rangoon(8)`, `(4) 4.25 (8) 6.50`],
+            [`Golden Fingers(5)`, `(S) 6.45 (L) 9.55`],
+            [`Wonton with Spicy Sauce`, `5.75`],
+            [`Cold Noodle with Sesame Sauce`, `5.75`],
+            [`Shrimp Dumplings(8)`, `8.95`],
+            [`Combination Dumplings(8)`, `8.95`],
+            [`Spicy Dumplings(8)`, `7.95`],
+            [`Pu Pu Platter for 2`, `14.35`],
+            [`Chicken Stick(4)`, `8.25`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -94,17 +96,17 @@ export default class Menu extends AbstractView {
     getSoup() {
         var result = ``;
         var foods = [
-            `Cantonese Wonton Soup(Shrimp and Pork)`,
-            `Wonton Soup`,
-            `Egg Drop Soup`,
-            `Chicken Rice Soup`,
-            `Chicken Noodle Soup`,
-            `Mixed Wonton Egg Drop Soup`,
-            `Hot and Sour Soup`,
-            `Vegetable Bean Curd Soup`,
-            `House Special Soup`,
-            `Seafood Soup`,
-            `Minced Chicken and Corn Soup`
+            [`Cantonese Wonton Soup(Shrimp and Pork)`, `Pt. 3.05 Qt. 5.25`],
+            [`Wonton Soup`, `Pt. 3.05 Qt. 5.25`],
+            [`Egg Drop Soup`, `Pt. 2.25 Qt. 4.50`],
+            [`Chicken Rice Soup`, `Pt. 3.05 Qt. 5.25`],
+            [`Chicken Noodle Soup`, `Pt. 3.05 Qt. 5.25`],
+            [`Mixed Wonton Egg Drop Soup`, `Pt. 3.05 Qt. 5.25`],
+            [`Hot and Sour Soup`, `Pt. 3.25 Qt. 5.55`],
+            [`Vegetable Bean Curd Soup`, `4.95`],
+            [`House Special Soup`, `6.95`],
+            [`Seafood Soup`, `7.25`],
+            [`Minced Chicken and Corn Soup`, `5.55`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -113,14 +115,14 @@ export default class Menu extends AbstractView {
     getFriedRice() {
         var result = ``;
         var foods = [
-            `Vegetable Fried Rice`,
-            `Chicken Fried Rice`,
-            `Roast Pork Fried Rice`,
-            `Beef Fried Rice`,
-            `Shrimp Fried Rice`,
-            `House Special Fried Rice`,
-            `Lobster Fried Rice`,
-            `Seafood Pineapple Fried Rice`
+            [`Vegetable Fried Rice`, `Pt. 5.25 Qt. 7.75`],
+            [`Chicken Fried Rice`, `Pt. 5.45 Qt. 8.25`],
+            [`Roast Pork Fried Rice`, `Pt. 5.45 Qt. 8.25`],
+            [`Beef Fried Rice`, `Pt. 6.00 Qt. 9.25`],
+            [`Shrimp Fried Rice`, `Pt. 6.00 Qt. 9.25`],
+            [`House Special Fried Rice`, `Pt. 6.35 Qt. 9.50`],
+            [`Lobster Fried Rice`, `Pt. 6.75 Qt. 10.45`],
+            [`Seafood Pineapple Fried Rice`, `Pt. 6.00 Qt. 9.25`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -129,9 +131,9 @@ export default class Menu extends AbstractView {
     getGrilled() {
         var result = ``;
         var foods = [
-            `Grilled Shrimp with Teriyaki Sauce`,
-            `Grilled Beef with Teriyaki Sauce`,
-            `Grilled Chicken with Teriyaki Sauce`
+            [`Grilled Shrimp with Teriyaki Sauce`, `11.95`],
+            [`Grilled Beef with Teriyaki Sauce`, `10.25`],
+            [`Grilled Chicken with Teriyaki Sauce`, `10.25`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -141,11 +143,12 @@ export default class Menu extends AbstractView {
     getMeinSuey() {
         var result = ``;
         var foods = [
-            `Vegetable Chow Mein or Chop Suey`,
-            `Pork Chow Mein or Chop Suey`,
-            `Chicken Chow Mein or Chop Suey`,
-            `Beef Chow Mein or Chop Suey`,
-            `Shrimp Chow Mein or Chop Suey`
+            [`Vegetable Chow Mein or Chop Suey`, `Pt. 5.60 Qt. 8.85`],
+            [`Pork Chow Mein or Chop Suey`, `Pt. 5.85 Qt. 9.10`],
+            [`Chicken Chow Mein or Chop Suey`, `Pt. 5.85 Qt. 9.10`],
+            [`Beef Chow Mein or Chop Suey`, `Pt. 6.20 Qt. 9.35`],
+            [`Shrimp Chow Mein or Chop Suey`, `Pt. 6.20 Qt. 9.35`],
+            [`House Special Chow Mein or Chop Suey`, `Pt. 6.60 Qt. 10.55`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -154,12 +157,12 @@ export default class Menu extends AbstractView {
     getLoMein() {
         var result = ``;
         var foods = [
-            `Vegetable Lo Mein`,
-            `Roast Pork Lo Mein`,
-            `Chicken Lo Mein`,
-            `Beef Lo Mein`,
-            `Shrimp Lo Mein`,
-            `House Special Lo Mein`
+            [`Vegetable Lo Mein`, ``],
+            [`Roast Pork Lo Mein`, ``],
+            [`Chicken Lo Mein`, ``],
+            [`Beef Lo Mein`, ``],
+            [`Shrimp Lo Mein`, ``],
+            [`House Special Lo Mein`, ``]
         ];
         result = this.htmlHelper(foods);
         return result;

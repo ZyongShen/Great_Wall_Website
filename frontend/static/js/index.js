@@ -51,6 +51,7 @@ async function router() {
         document.querySelector("#app").innerHTML = await view.getHtml(); // Set the html items upon page load
         document.querySelector("#myAbout").className = "nav-link active";
         document.querySelector("#myMenu").className = "nav-link";
+        document.title = "About"
     } else if (view instanceof Menu) {
         // Pass the pathname and find which html to show
         document.querySelector("#app").innerHTML = await view.getHtml(location.pathname);
@@ -58,6 +59,7 @@ async function router() {
         view.activeHelper(location.pathname);
         document.querySelector("#myMenu").className = "nav-link active";
         document.querySelector("#myAbout").className = "nav-link";
+        document.title = "Menu"
     }
 
 
@@ -75,18 +77,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target.matches("[data-link]")) {
             e.preventDefault(); // Prevent from refreshing the page
             navigateTo(e.target.href); // Follow the href found on the element
-            // reload page to show the map on the about page
-            if (window.location.href.indexOf("about") > -1) {
-                location.reload();
-            }
+            
         }
     })
+
     router(); // Sets the initial page items
 
     // Sets up the map on the about page
     var about = new About();
-    if (window.location.href.indexOf("about") > -1) {
-        about.makeMap();
-    }
+    about.makeMap();
 });
 
