@@ -16,7 +16,7 @@ export default class Menu extends AbstractView {
         // List is [[foot item, price]]
         var result = ``;
         for (var i = 0; i < foods.length; i++) {
-            result += `<div class = "card shadow-sm bg-white rounded"><div class = "card-body"><h5 id = "theFood">${foods[i]}</h5></div></div>`;
+            result += `<div class = "card shadow-sm bg-white rounded"><div class = "card-body"><h5 class = "card-title" id = "theFood">${foods[i][0]}</h5><h6 class = "card-subtitle text-muted" id = "pricing">${foods[i][1]}</h6></div></div>`;
         }
         return result; 
     }
@@ -40,18 +40,18 @@ export default class Menu extends AbstractView {
     getSpecialties() {
         var result = ``;
         var foods = [
-            `A. Fried Chicken Wings(4)`,
-            `B. Fried Scallops(12)`,
-            `C. Fried Jumbo Shrimp(6)`,
-            `D. Fried Crab Meat Stick(6)`,
-            `E. French Fries`,
-            `F. Onion Rings`,
-            `G. Fried Half Chicken`,
-            `H. Buffalo Chicken Wings`,
-            `I. Spare Rib Tips`,
-            `J. Fried Plantains`,
-            `K. Fried Fish`,
-            `L. Chinese Donut(10)`
+            [`A. Fried Chicken Wings(4)`, `<strong>Plain:</strong> 5.75 <br><strong>Plain Fried Rice or French Fries:</strong> 7.75 <br><strong>Chicken or Roast Pork Fried Rice:</strong> 7.75 <br><strong>Beef or Shrimp Fried Rice:</strong> 8.55`],
+            [`B. Fried Scallops(12)`, `<strong>Plain:</strong> 5.55 <br><strong>Plain Fried Rice or French Fries:</strong> 8.25 <br><strong>Chicken or Roast Pork Fried Rice:</strong> 8.25 <br><strong>Beef or Shrimp Fried Rice</strong> 9.25`],
+            [`C. Fried Jumbo Shrimp(6)`, `<strong>Plain:</strong> 7.25 <br><strong>Plain Fried Rice or French Fries:</strong> 8.25 <br><strong>Chicken or Roast Pork Fried Rice:</strong> 8.25 <br><strong>Beef or Shrimp Fried Rice</strong> 8.95`],
+            [`D. Fried Crab Meat Stick(6)`, `<strong>Plain:</strong> 4.75 <br><strong>Plain Fried Rice or French Fries</strong> 7.75 <br><strong>Chicken or Roast Pork Fried Rice:</strong> 7.75 <br><strong>Beef or Shrimp Fried Rice:</strong> 8.75`],
+            [`E. French Fries`, `(S) 2.95 (L) 4.55`],
+            [`F. Onion Rings`, `(S) 2.95 (L) 4.55`],
+            [`G. Fried Half Chicken`, `<strong>Plain:</strong> 5.95 <br><strong>Plain Fried Rice or French Fries:</strong> 7.95 <br><strong>Chicken or Roast Pork Fried Rice:</strong> 7.95 <br><strong>Beef or Shrimp Fried Rice:</strong> 8.95`],
+            [`H. Buffalo Chicken Wings(we. Blue Cheese)`, `<strong>Plain:</strong> 6.75`],
+            [`I. Spare Rib Tips`, `<strong>Plain:</strong> 6.75 <br><strong>Plain Fried Rice or French Fries:</strong> 7.75 <br><strong>Chicken or Roast Pork Fried Rice:</strong> 7.75 <br><strong>Beef or Shrimp Fried Rice:</strong> 8.75`],
+            [`J. Fried Plantains`, `<strong>Plain:</strong> 3.95`],
+            [`K. Fried Fish`, `<strong>Plain:</strong> 5.75 <br><strong>Plain Fried Rice or French Fries:</strong> 7.75 <br><strong>Chicken or Roast Pork Fried Rice:</strong> 7.75 <br><strong>Beef or Shrimp Fried Rice:</strong> 8.75`],
+            [`L. Chinese Donut(10)`, `<strong>Plain:</strong> 4.25`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -157,12 +157,12 @@ export default class Menu extends AbstractView {
     getLoMein() {
         var result = ``;
         var foods = [
-            [`Vegetable Lo Mein`, ``],
-            [`Roast Pork Lo Mein`, ``],
-            [`Chicken Lo Mein`, ``],
-            [`Beef Lo Mein`, ``],
-            [`Shrimp Lo Mein`, ``],
-            [`House Special Lo Mein`, ``]
+            [`Vegetable Lo Mein`, `(S) 5.85 (L) 8.85`],
+            [`Roast Pork Lo Mein`, `(S) 6.10 (L) 9.10`],
+            [`Chicken Lo Mein`, `(S) 6.10 (L) 9.10`],
+            [`Beef Lo Mein`, `(S) 6.45 (L) 9.35`],
+            [`Shrimp Lo Mein`, `(S) 6.45 (L) 9.35`],
+            [`House Special Lo Mein`, `(S) 6.85 (L) 10.55`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -172,12 +172,12 @@ export default class Menu extends AbstractView {
     getMeiChow() {
         var result = ``;
         var foods = [
-            `Roast Pork Mei Fun or Chow Fun`,
-            `Chicken Mei Fun or Chow Fun`,
-            `Beef Mei Fun or Chow Fun`,
-            `Shrimp Mei Fun or Chow Fun`,
-            `Singapore Style Mei Fun or Chow Fun`,
-            `Vegetable Mei Fun or Chow Fun`
+            [`Roast Pork Mei Fun or Chow Fun`, `(Mei) 9.35 (Chow) 10.35`],
+            [`Chicken Mei Fun or Chow Fun`, `(Mei) 9.35 (Chow) 10.35`],
+            [`Beef Mei Fun or Chow Fun`, `(Mei) 9.85 (Chow) 10.85`],
+            [`Shrimp Mei Fun or Chow Fun`, `(Mei) 9.85 (Chow) 10.85`],
+            [`Singapore Style Mei Fun or Chow Fun`, `(Mei) 10.55 (Chow) 11.55`],
+            [`Vegetable Mei Fun or Chow Fun`, `(Mei) 8.55 (Chow) 9.55`]
         ];
         result = this.htmlHelper(foods);
         return result;    
@@ -186,13 +186,13 @@ export default class Menu extends AbstractView {
     getEFG() {
         var result = ``;
         var foods = [
-            `Vegetable Egg Foo Young`,
-            `Roast Pork Egg Foo Young`,
-            `Chicken Egg Foo Young`,
-            `Mushroom Egg Foo Young`,
-            `Beef Egg Foo Young`,
-            `Shrimp Egg Foo Young`,
-            `House Special Egg Foo Young`
+            [`Vegetable Egg Foo Young`, `8.75`],
+            [`Roast Pork Egg Foo Young`, `8.75`],
+            [`Chicken Egg Foo Young`, `8.75`],
+            [`Mushroom Egg Foo Young`, `8.75`],
+            [`Beef Egg Foo Young`, `9.25`],
+            [`Shrimp Egg Foo Young`, `9.25`],
+            [`House Special Egg Foo Young`, `9.75`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -201,16 +201,16 @@ export default class Menu extends AbstractView {
     getPork() {
         var result = ``;
         var foods = [
-            `Roast Pork with Broccoli`,
-            `Roast Pork with Bean Sprouts`,
-            `Roast Pork with Chinese Vegetables`,
-            `Shredded Pork with String Beans`,
-            `Sweet and Sour Pork`,
-            `Pork with Mixed Vegetables`,
-            `Moo Shu Pork`,
-            `Shredded Pork with Szechuan Sauce`,
-            `Shredded Pork with Garlic Sauce`,
-            `Double Sauteed Sliced Pork`
+            [`Roast Pork with Broccoli`, `Pt. 6.60 Qt. 9.65`],
+            [`Roast Pork with Bean Sprouts`, `Pt. 6.60 Qt. 10.65`],
+            [`Roast Pork with Chinese Vegetables`, `Pt. 6.60 Qt. 10.65`],
+            [`Shredded Pork with String Beans`, `Pt. 6.60 Qt. 10.65`],
+            [`Sweet and Sour Pork`, `Pt. 6.60 Qt. 10.65`],
+            [`Pork with Mixed Vegetables`, `Pt. 6.60 Qt. 10.65`],
+            [`Moo Shu Pork`, `10.65`],
+            [`Shredded Pork with Szechuan Sauce`, `10.65`],
+            [`Shredded Pork with Garlic Sauce`, `10.65`],
+            [`Double Sauteed Sliced Pork`, `10.65`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -221,24 +221,24 @@ export default class Menu extends AbstractView {
     getChicken() {
         var result = ``;
         var foods = [
-            `Chicken with Lobster Sauce`,
-            `Chicken with Bean Curd`,
-            `Chicken with Broccoli`,
-            `Chicken with Almond Ding`,
-            `Chicken with Black Bean Sauce`,
-            `Chicken with Pepper and Tomato`,
-            `Moo Goo Gai Pan`,
-            `Curry Chicken with Onion`,
-            `Kung Pao Chicken`,
-            `Diced Chicken and Cashew`,
-            `Chicken with Stirng Beans`,
-            `Chicken with Eggplants`,
-            `Sweet and Sour Chicken`,
-            `Chicken with Mixed Vegetables`,
-            `Moo Shu Chicken`,
-            `Chicken with Garlic Sauce`,
-            `Chicken Hunan Style`,
-            `Szechuan Chicken`
+            [`Chicken with Lobster Sauce`, `Pt. 6.55 Qt. 10.65`],
+            [`Chicken with Bean Curd`, `Pt. 6.55 Qt. 10.65`],
+            [`Chicken with Broccoli`, `Pt. 6.70 Qt. 10.75`],
+            [`Chicken with Almond`, `Pt. 6.55 Qt. 10.65`],
+            [`Chicken with Black Bean Sauce`, `Pt. 6.55 Qt. 10.65`],
+            [`Chicken with Pepper and Tomato`, `Pt. 6.55 Qt. 10.65`],
+            [`Moo Goo Gai Pan`, `Pt. 6.55 Qt. 10.65`],
+            [`Curry Chicken with Onion`, `Pt. 6.55 Qt. 10.65`],
+            [`Kung Pao Chicken`, `Pt. 6.55 Qt. 10.65`],
+            [`Diced Chicken and Cashew`, `Pt. 6.55 Qt. 10.65`],
+            [`Chicken with Stirng Beans`, `Pt. 7.00 Qt. 10.65`],
+            [`Chicken with Eggplants`, `Pt. 6.55 Qt. 10.65`],
+            [`Sweet and Sour Chicken`, `Pt. 6.55 Qt. 10.65`],
+            [`Chicken with Mixed Vegetables`, `Pt, 6.55 Qt. 10.65`],
+            [`Moo Shu Chicken`, `10.65`],
+            [`Chicken with Garlic Sauce`, `10.65`],
+            [`Chicken Hunan Style`, `10.95`],
+            [`Szechuan Chicken`, `10.95`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -248,21 +248,21 @@ export default class Menu extends AbstractView {
     getBeef() {
         var result = ``;
         var foods = [
-            `Beef with Potato`,
-            `Beef with Broccoli`,
-            `Beef with Peppers and Onions`,
-            `Beef with Pepper and Tomato`,
-            `Beef with Chinese Vegetables`,
-            `Beef with Mushrooms`,
-            `Beef with Bean Sprouts`,
-            `Beef with Oyster Sauce`,
-            `Beef with Eggplant`,
-            `Beef with String Beans`,
-            `Beef with Mixed Vegetables`,
-            `Moo Shu Beef`,
-            `Beef with Garlic Sauce`,
-            `Beef with Hunan Style`,
-            `Hot and Spicy Shredded Beef`
+            [`Beef with Potato`, `Pt. 7.00 Qt. 11.95`],
+            [`Beef with Broccoli`, `Pt. 7.00 Qt. 11.75`],
+            [`Beef with Peppers and Onions`, `Pt. 7.00 Qt. 11.25`],
+            [`Beef with Pepper and Tomato`, `Pt. 7.00 Qt. 11.25`],
+            [`Beef with Chinese Vegetables`, `Pt. 7.00 Qt. 11.25`],
+            [`Beef with Mushrooms`, `Pt. 7.00 Qt. 11.25`],
+            [`Beef with Bean Sprouts`, `Pt. 7.00 Qt. 11.25`],
+            [`Beef with Oyster Sauce`, `Pt. 7.00 Qt. 11.25`],
+            [`Beef with Eggplant`, `Pt. 7.00 Qt. 11.25`],
+            [`Beef with String Beans`, `Pt. 7.00 Qt. 11.95`],
+            [`Beef with Mixed Vegetables`, `Pt. 7.00 Qt. 11.25`],
+            [`Moo Shu Beef`, `11.25`],
+            [`Beef with Garlic Sauce`, `11.95`],
+            [`Beef with Hunan Style`, `11.95`],
+            [`Hot and Spicy Shredded Beef`, `11.95`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -272,23 +272,23 @@ export default class Menu extends AbstractView {
     getSeafood() {
         var result = ``;
         var foods = [
-            `Shrimp with Lobster Sauce`,
-            `Shrimp with Chinese Vegetables`,
-            `Shrimp with Pepper and Tomato`,
-            `Shrimp with Black Bean Sauce`,
-            `Shrimp with Broccoli`,
-            `Curry Shrimp with Onion`,
-            `Shrimp with Eggplant`,
-            `Baby Shrimp with Bean Sprouts`,
-            `Baby Shrimp with Cashew Nuts`,
-            `Kung Pao Baby Shrimp`,
-            `Shrimp with Mixed Vegetables`,
-            `Moo Shu Shrimp`,
-            `Hot and Spicy Shrimp`,
-            `Shrimp with Garlic Sauce`,
-            `Sweet and Sour Shrimp`,
-            `Scallop with Garlic Sauce`,
-            `Szechuan Shrimp`
+            [`Shrimp with Lobster Sauce`, `Pt. 7.30 Qt. 11.55`],
+            [`Shrimp with Chinese Vegetables`, `Pt. 7.30 Qt. 11.55`],
+            [`Shrimp with Pepper and Tomato`, `Pt. 7.30 Qt. 11.55`],
+            [`Shrimp with Black Bean Sauce`, `Pt. 7.30 Qt. 11.55`],
+            [`Shrimp with Broccoli`, `Pt. 7.50 Qt. 11.75`],
+            [`Curry Shrimp with Onion`, `Pt. 7.30 Qt. 11.55`],
+            [`Shrimp with Eggplant`, `Pt. 7.30 Qt. 11.55`],
+            [`Baby Shrimp with Bean Sprouts`, `Pt. 7.30 Qt. 11.55`],
+            [`Baby Shrimp with Cashew Nuts`, `Pt. 7.30 Qt. 11.55`],
+            [`Kung Pao Baby Shrimp`, `Pt. 7.30 Qt. 11.55`],
+            [`Shrimp with Mixed Vegetables`, `Pt. 7.30 Qt. 11.55`],
+            [`Moo Shu Shrimp`, `11.55`],
+            [`Hot and Spicy Shrimp`, `11.55`],
+            [`Shrimp with Garlic Sauce`, `11.55`],
+            [`Sweet and Sour Shrimp`, `12.55`],
+            [`Scallop with Garlic Sauce`, `12.55`],
+            [`Szechuan Shrimp`, `12.55`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -297,10 +297,10 @@ export default class Menu extends AbstractView {
     getTofu() {
         var result = ``;
         var foods = [
-            `Ma Po Tofu`,
-            `Bean Curd with Mixed Vegetables`,
-            `Seasame Bean Curd`,
-            `General Tso's Bean Curd`
+            [`Ma Po Tofu`, `10.75`],
+            [`Bean Curd with Mixed Vegetables`, `10.75`],
+            [`Seasame Bean Curd`, `10.75`],
+            [`General Tso's Bean Curd`, `10.75`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -309,11 +309,11 @@ export default class Menu extends AbstractView {
     getVeg() {
         var result = ``;
         var foods = [
-            `Mixed Vegetables`,
-            `Broccoli with Spicy Garlic Sauce`,
-            `Sauteed String Beans`,
-            `Sauteed Chinese Eggplant in Garlic Sauce`,
-            `Moo Shu Vegetables`
+            [`Mixed Vegetables`, `Pt. 6.50 Qt. 9.25`],
+            [`Broccoli with Spicy Garlic Sauce`, `Pt. 6.50 Qt. 9.25`],
+            [`Sauteed String Beans`, `Pt. 6.50 Qt. 10.25`],
+            [`Sauteed Chinese Eggplant in Garlic Sauce`, `Pt. 6.50 Qt. 10.25`],
+            [`Moo Shu Vegetables`, `9.25`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -322,28 +322,28 @@ export default class Menu extends AbstractView {
     getHS() {
         var result = ``;
         var foods = [
-            `Seafood Delight`,
-            `Butterfly Shrimp`,
-            `Boneless Duck`,
-            `Boneless Chicken`,
-            `Oyster Beef with Scallops`,
-            `Chicken with Orange Flavor`,
-            `Beef with Scallion`,
-            `Peking Beef`,
-            `Sesame Chicken`,
-            `Sesame Shrimp`,
-            `General Tso's Chicken`,
-            `Scallops and Shrimp with Garlic Sauce`,
-            `Happy Family`,
-            `Orange Beef`,
-            `Sesame Beef`,
-            `Dragon and Phoenix`,
-            `General Tso's Shrimp`,
-            `Four Seasons`,
-            `Kung Pao Triple Delight`,
-            `Seafood Pan Fried Noodles`,
-            `Hunan Triple Delight`,
-            `Szechuan Pork and Chicken`
+            [`Seafood Delight`, `14.25`],
+            [`Butterfly Shrimp`, `13.45`],
+            [`Boneless Duck`, `15.95`],
+            [`Boneless Chicken`, `10.45`],
+            [`Oyster Beef with Scallops`, `13.45`],
+            [`Chicken with Orange Flavor`, `11.50`],
+            [`Beef with Scallion`, `11.75`],
+            [`Peking Beef`, `12.45`],
+            [`Sesame Chicken`, `11.55`],
+            [`Sesame Shrimp`, `12.45`],
+            [`General Tso's Chicken`, `11.55`],
+            [`Scallops and Shrimp with Garlic Sauce`, `12.45`],
+            [`Happy Family`, `14,45`],
+            [`Orange Beef`, `12.95`],
+            [`Sesame Beef`, `12.95`],
+            [`Dragon and Phoenix`, `12.45`],
+            [`General Tso's Shrimp`, `12.45`],
+            [`Four Seasons`, `12.00`],
+            [`Kung Pao Triple Delight`, `11.75`],
+            [`Seafood Pan Fried Noodles`, `13.75`],
+            [`Hunan Triple Delight`, `12.75`],
+            [`Szechuan Pork and Chicken`, `10.75`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -352,13 +352,13 @@ export default class Menu extends AbstractView {
     getHealth() {
         var result = ``;
         var foods = [
-            `Chinese Vegetable with Chicken`,
-            `Triple Jade Delight`,
-            `Crystal Prawns with Chicken`,
-            `Spring Flower Chicken`,
-            `Vegetarian Paradise`,
-            `Four Season Delight`,
-            `May Flowers`
+            [`Chinese Vegetable with Chicken`, `11.95`],
+            [`Triple Jade Delight`, `12.75`],
+            [`Crystal Prawns with Chicken`, `12.45`],
+            [`Spring Flower Chicken`, `12.00`],
+            [`Vegetarian Paradise`, `11.45`],
+            [`Four Season Delight`, `11.45`],
+            [`May Flowers`, `11.45`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -367,49 +367,49 @@ export default class Menu extends AbstractView {
     getDinner() {
         var result = ``;
         var foods = [
-            `C1. Chicken Finger`,
-            `C2. Boneless Spare Ribs`,
-            `C3. Shrimp Teriyaki`,
-            `C4. Shrimp and Chicken`,
-            `C5. General Tso's Chicken`,
-            `C6. Sesame Chicken`,
-            `C7. Chicken with Garlic Sauce`,
-            `C8. Sweet and Sour Chicken`,
-            `C9. Chicken with Broccoli`,
-            `C10. Kung Po Chicken`,
-            `C11. Chicken with Cashew Nuts`,
-            `C12. Curry Chicken`,
-            `C13. Chicken with String Beans`,
-            `C14. Chicken with Mixed Vegetables`,
-            `C15. Moo Goo Gai Pan`,
-            `C16. Chicken with Eggplant`,
-            `C17. Pepper Steak with Onion`,
-            `C18. Beef with Broccoli`,
-            `C19. Beef with Snow Peas`,
-            `C20. Beef with Chinese Vegetables`,
-            `C21. Steak with Potato`,
-            `C22. Hot and Spicy Beef`,
-            `C23. Beijing Beef`,
-            `C24. Beef Szechuan Style`,
-            `C25. Beef with Mushrooms`,
-            `C26. Sweet and Sour Pork`,
-            `C27. Roast Pork Egg Foo Young`,
-            `C28. Roast Pork with Broccoli`,
-            `C29. Shredded Pork with Garlic Sauce`,
-            `C30. Double Sauteed Sliced Pork`,
-            `C31. Mixed Vegetables`,
-            `C32. Broccoli with Garlic Sauce`,
-            `C33. Eggplant with Garlic Sauce`,
-            `C34. Shrimp with Lobster Sauce`,
-            `C35. Shrimp with Broccoli`,
-            `C36. Shrimp with Garlic Sauce`,
-            `C37. Shrimp with Mixed Vegetables`,
-            `C38. Hunan Shrimp`,
-            `C39. Baby Shrimp with Cashew Nuts`,
-            `C40. Kung Po Baby Shrimp`,
-            `C41. Hot and Spicy Shrimp`,
-            `C42. Chow Mein`,
-            `C43. Lo Mein`
+            [`C1. Chicken Finger`, `(L) 6.65 (D) 8.85`],
+            [`C2. Boneless Spare Ribs`, `(L) 6.85 (D) 9.05`],
+            [`C3. Shrimp Teriyaki`, `(L) 6.95 (D) 8.95`],
+            [`C4. Shrimp and Chicken`, `(L) 7.25 (D) 8.95`],
+            [`C5. General Tso's Chicken`, `(L) 6.75 (D) 9.05`],
+            [`C6. Sesame Chicken`, `(L) 6.75 (D) 8.85`],
+            [`C7. Chicken with Garlic Sauce`, `(L) 6.65 (D) 8.85`],
+            [`C8. Sweet and Sour Chicken`, `(L) 6.65 (D) 8.85`],
+            [`C9. Chicken with Broccoli`, `(L) 6.65 (D) 8.85`],
+            [`C10. Kung Po Chicken`, `(L) 6.65 (D) 8.85`],
+            [`C11. Chicken with Cashew Nuts`, `(L) 6.65 (D) 8.85`],
+            [`C12. Curry Chicken`, `(L) 6.65 (D) 8.85`],
+            [`C13. Chicken with String Beans`, `(L) 6.65 (D) 8.85`],
+            [`C14. Chicken with Mixed Vegetables`, `(L) 6.65 (D) 8.85`],
+            [`C15. Moo Goo Gai Pan`, `(L) 6.65 (D) 8.85`],
+            [`C16. Chicken with Eggplant`, `(L) 6.65 (D) 8.85`],
+            [`C17. Pepper Steak with Onion`, `(L) 6.75 (D) 8.85`],
+            [`C18. Beef with Broccoli`, `(L) 6.75 (D) 8.85`],
+            [`C19. Beef with Snow Peas`, `(L) 7.10 (D) 8.85`],
+            [`C20. Beef with Chinese Vegetables`, ``],
+            [`C21. Steak with Potato`, `(L) 6.95 (D) 8.95`],
+            [`C22. Hot and Spicy Beef`, `(L) 6.75 (D) 8.85`],
+            [`C23. Beijing Beef`, `(L) 6.95 (D) 8.95`],
+            [`C24. Beef Szechuan Style`, `(L) 6.75 (D) 8.95`],
+            [`C25. Beef with Mushrooms`, `(L) 6.75 (D) 8.85`],
+            [`C26. Sweet and Sour Pork`, `(L) 6.65 (D) 8.85`],
+            [`C27. Roast Pork Egg Foo Young`, `(L) 6.65 (D) 8.85`],
+            [`C28. Roast Pork with Broccoli`, `(L) 6.65 (D) 8.85`],
+            [`C29. Shredded Pork with Garlic Sauce`, `(L) 6.65 (D) 8.85`],
+            [`C30. Double Sauteed Sliced Pork`, `(L) 6.65 (D) 8.85`],
+            [`C31. Mixed Vegetables`, `(L) 6.65 (D) 8.85`],
+            [`C32. Broccoli with Garlic Sauce`, `(L) 6.65 (D) 8.85`],
+            [`C33. Eggplant with Garlic Sauce`, `(L) 6.65 (D) 8.85`],
+            [`C34. Shrimp with Lobster Sauce`, `(L) 6.95 (D) 8.95`],
+            [`C35. Shrimp with Broccoli`, `(L) 6.95 (D) 8.85`],
+            [`C36. Shrimp with Garlic Sauce`, `(L) 6.95 (D) 8.85`],
+            [`C37. Shrimp with Mixed Vegetables`, `(L) 6.95 (D) 8.85`],
+            [`C38. Hunan Shrimp`, `(L) 6.95 (D) 8.85`],
+            [`C39. Baby Shrimp with Cashew Nuts`, `(L) 6.95 (D) 8.85`],
+            [`C40. Kung Po Baby Shrimp`, `(L) 6.95 (D) 8.85`],
+            [`C41. Hot and Spicy Shrimp`, `(L) 6.95 (D) 8.85`],
+            [`C42. Chow Mein`, `(L) 6.65 (D) 8.85`],
+            [`C43. Lo Mein`, `(L) 6.65 (D) 8.85`]
         ];
         result = this.htmlHelper(foods);
         return result
@@ -418,15 +418,15 @@ export default class Menu extends AbstractView {
     getAmerDish() {
         var result = ``;
         var foods = [
-            `Chicken Fingers & Beef Stick`,
-            `General Tso's Chicken & Boneless Spare Ribs`,
-            `Chicken Fingers & Boneless Spare Ribs`,
-            `Chicken Stick & General Tso's Chicken`,
-            `Beef Stick & Boneless Spare Ribs`,
-            `Crab Rangoon & Chicken Fingers`,
-            `General Tso's Chicken & Crab Rangoon`,
-            `Crab Rangoon & Boneless Spare Ribs`,
-            `Chicken Wings & General Tso's Chicken`
+            [`Chicken Fingers & Beef Stick`, `(L) 7.75 (D) 9.75`],
+            [`General Tso's Chicken & Boneless Spare Ribs`, `(L) 7.75 (D) 9.75`],
+            [`Chicken Fingers & Boneless Spare Ribs`, `(L) 7.75 (D) 9.75`],
+            [`Chicken Stick & General Tso's Chicken`, `(L) 7.75 (D) 9.75`],
+            [`Beef Stick & Boneless Spare Ribs`, `(L) 7.75 (D) 9.75`],
+            [`Crab Rangoon & Chicken Fingers`, `(L) 7.75 (D) 9.75`],
+            [`General Tso's Chicken & Crab Rangoon`, `(L) 7.75 (D) 9.75`],
+            [`Crab Rangoon & Boneless Spare Ribs`, `(L) 7.75 (D) 9.75`],
+            [`Chicken Wings & General Tso's Chicken`, `(L) 7.75 (D) 9.75`]
         ];
         result = this.htmlHelper(foods);
         return result;
@@ -435,32 +435,32 @@ export default class Menu extends AbstractView {
     getThai() {
         var result = ``;
         var rice = [
-            `Chicken Fried Rice`,
-            `Pork Fried Rice`,
-            `Beef Fried Rice`,
-            `Shrimp Fried Rice`
+            [`Chicken Fried Rice`, `10.99`],
+            [`Pork Fried Rice`,  `10.99`],
+            [`Beef Fried Rice`, `11.99`],
+            [`Shrimp Fried Rice`, `11.99`]
         ];
         var noodle = [
-            `Chicken Pad Thai`,
-            `Pork Pad Thai`,
-            `Beef Pad Thai`,
-            `Shrimp Pad Thai`
+            [`Chicken Pad Thai`, `11.99`],
+            [`Pork Pad Thai`, `11.99`],
+            [`Beef Pad Thai`, `11.99`],
+            [`Shrimp Pad Thai`, `11.99`]
         ];
         var basil = [
-            `Chicken Basil Sauce`,
-            `Pork Basil Sauce`,
-            `Beef Basil Sauce`,
-            `Shrimp Basil Sauce`
+            [`Chicken Basil Sauce`, `11.99`],
+            [`Pork Basil Sauce`, `11.99`],
+            [`Beef Basil Sauce`, `12.99`],
+            [`Shrimp Basil Sauce`, `12.99`]
         ];
         var coconut = [
-            `Chicken Green or Red Curry`,
-            `Beef Green or Red Curry`,
-            `Shrimp Green or Red Curry`
+            [`Chicken Green or Red Curry`, `12.99`],
+            [`Beef Green or Red Curry`, `12.99`],
+            [`Shrimp Green or Red Curry`, `12.99`]
         ];
         var mango = [
-            `Chicken Thai Mango`,
-            `Beef Thai Mango`,
-            `Shrimp Thai Mango`
+            [`Chicken Thai Mango`, `13.25`],
+            [`Beef Thai Mango`, `13.25`],
+            [`Shrimp Thai Mango`, `13.25`]
         ];
         result = this.thaiHelper(rice, noodle, basil, coconut, mango);
         return result;
@@ -469,14 +469,14 @@ export default class Menu extends AbstractView {
     getDiet() {
         var result = ``;
         var foods = [
-            `Steamed White Meat Chicken and Broccoli`,
-            `Steamed Beef with Broccoli`,
-            `Steamed Shrimp with Broccoli`,
-            `Steamed Mixed Vegetables`,
-            `Steamed Chicken with Mixed Vegetables`,
-            `Steamed Shrimp with Mixed Vegetables`,
-            `Steamed Bean Curd with Vegetables`,
-            `Steamed Triple Delight`
+            [`Steamed White Meat Chicken and Broccoli`, `10.75`],
+            [`Steamed Beef with Broccoli`, `11.25`],
+            [`Steamed Shrimp with Broccoli`, `11.25`],
+            [`Steamed Mixed Vegetables`, `9.00`],
+            [`Steamed Chicken with Mixed Vegetables`, `10.75`],
+            [`Steamed Shrimp with Mixed Vegetables`, `11.25`],
+            [`Steamed Bean Curd with Vegetables`, `9.00`],
+            [`Steamed Triple Delight`, `11.75`]
         ];
         result = this.htmlHelper(foods);
         return result;
