@@ -535,6 +535,7 @@ export default class Menu extends AbstractView {
         <div class = "container">
             <div class = "row">
                 <div class = "col-3">
+                <div class = "scrollItems">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link" id="specialties" data-toggle="pills" href="/menu/specialties" role="tab" aria-controls="v-pills-home" aria-selected="false">Specialties</a>
                     <a class="nav-link" id="appetizer" data-toggle = "pills" href="/menu/appetizer" role="tab" aria-controls="v-pills-profile" aria-selected="false">Appetizer</a>
@@ -558,7 +559,7 @@ export default class Menu extends AbstractView {
                     <a class="nav-link" id="amerdish" data-toggle="pills" href="/menu/amerdish" role="tab" aria-controls="v-pills-settings" aria-selected="false">American Dish Specials</a>
                     <a class="nav-link" id="thai" data-toggle="pills" href="/menu/thai" role="tab" aria-controls="v-pills-settings" aria-selected="false">Thai Food</a>
                     </div>
-
+                </div>
                 </div>
 
                 <div class = "col-9">

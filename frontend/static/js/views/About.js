@@ -25,18 +25,18 @@ export default class About extends AbstractView {
             <div class = "container">
                 <div class = "row">
                     <div class = "col-md-6">
-                        <h1 class = "gwname" id = "myName">Great Wall</h1>
-                        <h6>685 Silas Deane Hwy. Wethersfield, CT 06109</h6>
-                        <h6>(860) 257-9933</h6>
+                        <h1 class = "gwname" id = "myName">Location</h1>
+                        <h6 id = "gwInfo">685 Silas Deane Hwy. Wethersfield, CT 06109</h6>
+                        <h6 id = "gwInfo">(860) 257-9933</h6>
 
-                        <h2 class = "hours">Hours</h2>
-                        <h6>Sunday: 12:00 PM - 10:00 PM</h6>
-                        <h6>Monday: 10:30 AM - 10:30 PM</h6>
-                        <h6>Tuesday: 5:00 PM - 10:30 PM</h6>
-                        <h6>Wednesday: 10:30 AM - 10:30 PM</h6>
-                        <h6>Thursday: 10:30 AM - 10:30 PM</h6>
-                        <h6>Friday: 10:30 AM - 11:00 PM</h6>
-                        <h6>Saturday: 10:30 AM - 11:00 PM</h6>
+                        <h2 id = "gwInfo" class = "hours">Hours</h2>
+                        <h6 id = "gwInfo">Sunday: 12:00 PM - 10:00 PM</h6>
+                        <h6 id = "gwInfo">Monday: 10:30 AM - 10:30 PM</h6>
+                        <h6 id = "gwInfo">Tuesday: 5:00 PM - 10:30 PM</h6>
+                        <h6 id = "gwInfo">Wednesday: 10:30 AM - 10:30 PM</h6>
+                        <h6 id = "gwInfo">Thursday: 10:30 AM - 10:30 PM</h6>
+                        <h6 id = "gwInfo">Friday: 10:30 AM - 11:00 PM</h6>
+                        <h6 id = "gwInfo">Saturday: 10:30 AM - 11:00 PM</h6>
 
                         <pre>
 

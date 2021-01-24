@@ -2,11 +2,19 @@ img {
     width: 100%;
     height: 150px;
     object-fit: cover;
+    object-position: 20% 80%;
+}
+
+#GWLogo {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .gwname {
     font-weight: bold;
     font-family: Arial;
+    color: black;
 }
 
 .hours {
@@ -16,6 +24,7 @@ img {
 #payments {
     font-weight: bold;
 }
+
 
 hr {
     display: block;
@@ -70,7 +79,7 @@ a {
 }
 
 #app {
-    background-image: url("https://www.desktopbackground.org/download/3440x1440/2015/08/15/995606_great-wall-of-china-wallpapers_3840x2160_h.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2013/03/21/14/16/china-95571_960_720.jpg");
 }
 
 .scrollItems {
@@ -81,6 +90,7 @@ a {
 #theFood {
     text-align: left;
 }
-#pricing {
-    
+
+#gwInfo {
+    color: black;
 }
