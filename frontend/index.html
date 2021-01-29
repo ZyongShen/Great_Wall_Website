@@ -31,43 +31,66 @@
 
   <body>
 
-    <div class = "container">
-      <div class = "col-md-12">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <!-- Container wrapper -->
-          <div class="container-fluid">
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="/menu">
-              <img id = "GWLogo" src = "https://www.dropbox.com/s/4pa6jkilyc0r2zk/GW_Logo_Letters_transparent.png?raw=1" alt = "">
-            </a>
-    
-            <!-- Toggle button -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-mdb-toggle="collapse"
-              data-mdb-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i class="fas fa-bars"></i>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="/menu" id = "myMenu">Menu</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/about" id = "myAbout">About</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="/menu">
+          <img id = "GWLogo" src = "https://www.dropbox.com/s/4pa6jkilyc0r2zk/GW_Logo_Letters_transparent.png?raw=1" alt = "">
+        </a>
+
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/menu/specialties">Specialties</a>
+                <a class="dropdown-item" href="/menu/appetizer">Appetizer</a>
+                <a class = "dropdown-item" href="/menu/soup">Soup</a>
+                <a class="dropdown-item" href="/menu/friedrice">Fried Rice</a>
+                <a class="dropdown-item" href="/menu/grilled">Grilled</a>
+                <a class="dropdown-item" href="/menu/meinsuey">Chow Mein/Chop Suey</a>
+                <a class="dropdown-item" href="/menu/lomein">Lo Mein</a>
+                <a class="dropdown-item" href="/menu/meichow">Mei Fun/Chow Fun</a>
+                <a class="dropdown-item" href="/menu/efg">Egg Foo Young</a>
+                <a class="dropdown-item" href="/menu/pork">Pork</a>
+                <a class="dropdown-item" href="/menu/diet">Special Diet Dishes</a>
+                <a class="dropdown-item" href="/menu/chicken">Chicken</a>
+                <a class="dropdown-item" href="/menu/beef">Beef</a>
+                <a class="dropdown-item" href="/menu/seafood">Seafood</a>
+                <a class="dropdown-item" href="/menu/tofu">Tofu</a>
+                <a class="dropdown-item" href="/menu/vegetable">Vegetable</a>
+                <a class="dropdown-item" href="/menu/housespecial">House Special</a>
+                <a class="dropdown-item" href="/menu/healthdelight">Healthy Delight Entree's</a>
+                <a class="dropdown-item" href="/menu/dinner">Dinner</a>
+                <a class="dropdown-item" href="/menu/amerdish">American Dish Specials</a>
+                <a class="dropdown-item" href="/menu/thai">Thai Food</a>
+
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about" id = "myAbout">About</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
+
     
 
       <!--Logo image: https://www.dropbox.com/s/l2z3y1zoc18dvuz/GW_Logo_Letters.jpg?raw=1-->

@@ -534,35 +534,7 @@ export default class Menu extends AbstractView {
         return `
         <div class = "container">
             <div class = "row">
-                <div class = "col-3">
-                <div class = "scrollItems">
-                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link" id="specialties" data-toggle="pills" href="/menu/specialties" role="tab" aria-controls="v-pills-home" aria-selected="false">Specialties</a>
-                    <a class="nav-link" id="appetizer" data-toggle = "pills" href="/menu/appetizer" role="tab" aria-controls="v-pills-profile" aria-selected="false">Appetizer</a>
-                    <a class="nav-link" id="soup" data-toggle="pills" href="/menu/soup" role="tab" aria-controls="v-pills-messages" aria-selected="false">Soup</a>
-                    <a class="nav-link" id="friedrice" data-toggle="pills" href="/menu/friedrice" role="tab" aria-controls="v-pills-settings" aria-selected="false">Fried Rice</a>
-                    <a class="nav-link" id="grilled" data-toggle="pills" href="/menu/grilled" role="tab" aria-controls="v-pills-settings" aria-selected="false">Grilled</a>
-                    <a class="nav-link" id="meinsuey" data-toggle="pills" href="/menu/meinsuey" role="tab" aria-controls="v-pills-settings" aria-selected="false">Chow Mein/Chop Suey</a>
-                    <a class="nav-link" id="lomein" data-toggle="pills" href="/menu/lomein" role="tab" aria-controls="v-pills-settings" aria-selected="false">Lo Mein</a>
-                    <a class="nav-link" id="meichow" data-toggle="pills" href="/menu/meichow" role="tab" aria-controls="v-pills-settings" aria-selected="false">Mei Chow</a>
-                    <a class="nav-link" id="efg" data-toggle="pills" href="/menu/efg" role="tab" aria-controls="v-pills-settings" aria-selected="false">Egg Foo Young</a>
-                    <a class="nav-link" id="pork" data-toggle="pills" href="/menu/pork" role="tab" aria-controls="v-pills-settings" aria-selected="false">Pork</a>
-                    <a class="nav-link" id="diet" data-toggle="pills" href="/menu/diet" role="tab" aria-controls="v-pills-settings" aria-selected="false">Special Diet Dishes</a>
-                    <a class="nav-link" id="chicken" data-toggle="pills" href="/menu/chicken" role="tab" aria-controls="v-pills-settings" aria-selected="false">Chicken</a>
-                    <a class="nav-link" id="beef" data-toggle="pills" href="/menu/beef" role="tab" aria-controls="v-pills-settings" aria-selected="false">Beef</a>
-                    <a class="nav-link" id="seafood" data-toggle="pills" href="/menu/seafood" role="tab" aria-controls="v-pills-settings" aria-selected="false">Seafood</a>
-                    <a class="nav-link" id="tofu" data-toggle="pills" href="/menu/tofu" role="tab" aria-controls="v-pills-settings" aria-selected="false">Tofu</a>
-                    <a class="nav-link" id="vegetable" data-toggle="pills" href="/menu/vegetable" role="tab" aria-controls="v-pills-settings" aria-selected="false">Vegetable</a>
-                    <a class="nav-link" id="housespecial" data-toggle="pills" href="/menu/housespecial" role="tab" aria-controls="v-pills-settings" aria-selected="false">House Special</a>
-                    <a class="nav-link" id="healthdelight" data-toggle="pills" href="/menu/healthdelight" role="tab" aria-controls="v-pills-settings" aria-selected="false">Healthy Delight Entree's</a>
-                    <a class="nav-link" id="dinner" data-toggle="pills" href="/menu/dinner" role="tab" aria-controls="v-pills-settings" aria-selected="false">Dinner</a>
-                    <a class="nav-link" id="amerdish" data-toggle="pills" href="/menu/amerdish" role="tab" aria-controls="v-pills-settings" aria-selected="false">American Dish Specials</a>
-                    <a class="nav-link" id="thai" data-toggle="pills" href="/menu/thai" role="tab" aria-controls="v-pills-settings" aria-selected="false">Thai Food</a>
-                    </div>
-                </div>
-                </div>
-
-                <div class = "col-9">
+                <div class = "col-12">
                     <div id = "items">
                         <div class = "scrollItems">
                             ${specifics}
